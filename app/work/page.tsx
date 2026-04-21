@@ -2,7 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 
 export const metadata = {
-  title: "Work — Muhammad Ega",
+  title: "Work · Muhammad Ega",
   description:
     "AI PM case studies (codehere, ravenote, beeready) and five years of corporate product management across Mekari, Shopee, IBM, and Jaguar Land Rover.",
 }
@@ -40,7 +40,7 @@ const aiCaseStudies: CaseStudy[] = [
       "Live on Chrome Web Store v1.0 with Stripe-backed Pro subscriptions",
       "OpenRouter fallback routing across 4 providers (Sonnet 4.6 default, Gemini / Qwen / OpenAI backup)",
       "Usage-based cost reconciliation: webhook ties OpenRouter generation costs to Stripe charges",
-      "Free tier bring-your-own-key, Pro tier proxy — clean separation of cost economics",
+      "Free tier bring-your-own-key, Pro tier proxy. Clean separation of cost economics",
     ],
   },
   {
@@ -54,6 +54,18 @@ const aiCaseStudies: CaseStudy[] = [
       "Rubric-based evals: scoring against LPDP band descriptors, IELTS / TOEFL criteria",
       "Sub-60-second scoring across Communication, Problem-solving, Leadership dimensions",
       "3-tier IDR pricing (Rp 10K single / Rp 28K pack / Rp 150K monthly) live",
+    ],
+  },
+  {
+    slug: "nectic",
+    name: "nectic",
+    subtitle: "Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams. No filters, no drama.",
+    archetype: "AI for emerging-market GTM",
+    liveUrl: "https://nectic.xyz",
+    highlights: [
+      "Tackles a SE-Asia-specific gap: sales happens on WhatsApp, PM teams fly blind",
+      "LLM summarization over sales conversation logs into weekly product intelligence digest",
+      "Landing live, positioning validated, early private-beta territory",
     ],
   },
 ]
@@ -72,7 +84,7 @@ const corporate: Role[] = [
     role: "Product Engineer",
     company: "Jaguar Land Rover",
     location: "Manchester, UK",
-    period: "Sep 2024 — Present",
+    period: "Sep 2024 to Present",
     summary:
       "Designing and shipping internal automation for connected-vehicle services, authoring technical user stories, and collaborating with engineering on platform reliability.",
     wins: [
@@ -84,7 +96,7 @@ const corporate: Role[] = [
     role: "Senior Product Manager",
     company: "Mekari",
     location: "Jakarta",
-    period: "Sep 2023 — Aug 2024",
+    period: "Sep 2023 to Aug 2024",
     summary:
       "Owned the API-first product roadmap for 600+ enterprise customers at Indonesia's leading B2B SaaS. Led AI-driven compliance automation and developer integration launches.",
     wins: [
@@ -97,12 +109,12 @@ const corporate: Role[] = [
     role: "Product Manager",
     company: "Shopee",
     location: "Jakarta",
-    period: "Feb 2022 — Jul 2022",
+    period: "Feb 2022 to Jul 2022",
     summary:
       "Led seller onboarding and growth programs across Southeast Asia's largest e-commerce platform.",
     wins: [
       "Growth program adopted by 2.8M+ sellers; monthly signups up 20%",
-      "Operationalized churn prediction with data science — 18% churn reduction, retained ~$1.2M GMV",
+      "Operationalized churn prediction with data science: 18% churn reduction, retained ~$1.2M GMV",
       "50+ seller interviews drove support-ticket reduction of 32% and CSAT improvement from 3.2 → 4.0",
     ],
   },
@@ -110,7 +122,7 @@ const corporate: Role[] = [
     role: "Software Specialist",
     company: "IBM",
     location: "Jakarta",
-    period: "May 2020 — Jan 2022",
+    period: "May 2020 to Jan 2022",
     summary:
       "Led 4-person engineering team delivering AI and RPA automation for enterprise clients; shipped early conversational AI during COVID.",
     wins: [

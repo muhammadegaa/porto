@@ -27,7 +27,7 @@ const caseStudies: Record<string, CaseStudy> = {
     archetype: "AI dev tools · safety",
     status: "v0.3 alpha · shipped to npm · landing live",
     liveUrl: "https://codehere.uk",
-    role: "Solo PM + builder — product strategy, PRD, go-to-market",
+    role: "Solo PM + builder, product strategy, PRD, go-to-market",
     stack: [
       "Node/TS CLI",
       "OpenRouter multi-provider (Claude, OpenAI, Cohere, Ollama)",
@@ -41,7 +41,7 @@ const caseStudies: Record<string, CaseStudy> = {
         heading: "The bet",
         body: [
           "Enterprises are replacing junior engineers with AI coding agents, but nobody is shipping the apprenticeship-upgrade path. Meanwhile, DeepMind/MIT (2025) measured 17.2× error amplification in multi-agent systems, and 45% of AI-generated code contains vulnerabilities.",
-          "codehere's wedge is not \"another coding agent.\" It's the pre-execution audit layer that every agent will need. We own the governance step — the scanner that runs before an AI write touches disk — and bundle it with a coding agent so developers get the value without an extra tool.",
+          "codehere's wedge is not \"another coding agent.\" It's the pre-execution audit layer that every agent will need. We own the governance step, the scanner that runs before an AI write touches disk, and bundle it with a coding agent so developers get the value without an extra tool.",
         ],
       },
       {
@@ -63,7 +63,7 @@ const caseStudies: Record<string, CaseStudy> = {
       {
         heading: "Tradeoffs I'd revisit",
         body: [
-          "Pattern-based scanning has a false-positive ceiling. Next iteration uses an LLM-judge over flagged diffs — but that re-introduces a dependency I initially wanted to avoid.",
+          "Pattern-based scanning has a false-positive ceiling. Next iteration uses an LLM-judge over flagged diffs, but that re-introduces a dependency I initially wanted to avoid.",
           "Multi-provider is a feature for early users and a tax on me. Each provider has different streaming, tool-calling, and error shapes. A thin adapter abstraction paid for itself by v0.3 but slowed v0.1.",
         ],
       },
@@ -86,7 +86,7 @@ const caseStudies: Record<string, CaseStudy> = {
     archetype: "Consumer AI · monetization",
     status: "v1.0 live on Chrome Web Store · Stripe Pro tier active",
     liveUrl: "https://ravenote.xyz",
-    role: "Solo PM + builder — product, pricing, backend, GTM",
+    role: "Solo PM + builder, product, pricing, backend, GTM",
     stack: [
       "Chrome extension (MV3)",
       "OpenRouter multi-model routing",
@@ -98,20 +98,20 @@ const caseStudies: Record<string, CaseStudy> = {
     sections: [
       {
         heading: "The problem",
-        body: "Self-learners on Udemy and YouTube spend hours in passive video playback. The comprehension wins they want — structured notes, spaced retrieval quizzes — require re-watching and manual effort. Generative models can do this in seconds; nobody had shipped a zero-friction capture loop inside the actual learning surface.",
+        body: "Self-learners on Udemy and YouTube spend hours in passive video playback. The comprehension wins they want, structured notes, spaced retrieval quizzes, require re-watching and manual effort. Generative models can do this in seconds; nobody had shipped a zero-friction capture loop inside the actual learning surface.",
       },
       {
         heading: "What it does",
         body: [
           "Content scripts on Udemy and YouTube silently capture the lecture transcript as you watch, then one-click generates structured notes (headings, key concepts, summary) and a short recall quiz.",
-          "Free tier: 3 lectures/day, bring-your-own OpenRouter key — users own the cost.",
+          "Free tier: 3 lectures/day, bring-your-own OpenRouter key, users own the cost.",
           "Pro tier (Stripe subscription): unlimited generation via our backend proxy that hides the key; we absorb the LLM cost and reconcile against subscription revenue.",
         ],
       },
       {
         heading: "PM decisions I'm proud of",
         body: [
-          "Cost-aware routing as a product feature. The backend defaults to Sonnet 4.6 and falls back across Gemini / Qwen / OpenAI via OpenRouter if the primary errors. When Anthropic retires old 3.5 models, our router auto-remaps — zero user-facing break.",
+          "Cost-aware routing as a product feature. The backend defaults to Sonnet 4.6 and falls back across Gemini / Qwen / OpenAI via OpenRouter if the primary errors. When Anthropic retires old 3.5 models, our router auto-remaps, zero user-facing break.",
           "Bring-your-own-key for free tier is the anti-VC-burn lever. Free users can't spike our costs; Pro users pay for abstraction (they don't want to manage keys). This kept COGS inside margin from day one.",
           "Webhook-based cost reconciliation. OpenRouter reports actual generation cost ~1s after the response; we store it and reconcile against the Stripe subscription. If a user is in deficit we know which model choices to rebalance.",
         ],
@@ -127,7 +127,7 @@ const caseStudies: Record<string, CaseStudy> = {
     interviewPrep: [
       {
         q: "How do you evaluate note quality without a ground-truth dataset?",
-        a: "Two loops: (1) a rubric-based LLM-judge with a fixed rubric (coverage, structure, no-hallucination) over a 30-lecture golden set; (2) qualitative — retention scores from the generated quizzes correlate with note coherence. Not perfect, but it catches regressions when I change prompts or models.",
+        a: "Two loops: (1) a rubric-based LLM-judge with a fixed rubric (coverage, structure, no-hallucination) over a 30-lecture golden set; (2) qualitative, retention scores from the generated quizzes correlate with note coherence. Not perfect, but it catches regressions when I change prompts or models.",
       },
       {
         q: "Why didn't you build a web app instead of a Chrome extension?",
@@ -146,7 +146,7 @@ const caseStudies: Record<string, CaseStudy> = {
     archetype: "Vertical voice AI",
     status: "Live · IDR pricing tiers active · early traction",
     liveUrl: "https://beeready.dev",
-    role: "Solo PM + builder — product, evals design, pricing",
+    role: "Solo PM + builder, product, evals design, pricing",
     stack: [
       "GPT-4o (evaluation + coaching)",
       "ElevenLabs (realtime voice)",
@@ -163,16 +163,16 @@ const caseStudies: Record<string, CaseStudy> = {
         heading: "What it does",
         body: [
           "A realtime voice interview with 4 distinct AI evaluator personas across interview phases (warm-up, behavioral, technical/situational, closing).",
-          "Scoring happens against official rubrics: LPDP band descriptors, IELTS band descriptors, TOEFL speaking rubrics. Output dimensions: Communication, Problem-solving, Leadership — with specific evidence pulled from the session transcript.",
+          "Scoring happens against official rubrics: LPDP band descriptors, IELTS band descriptors, TOEFL speaking rubrics. Output dimensions: Communication, Problem-solving, Leadership, with specific evidence pulled from the session transcript.",
           "For professional interviews, a CV-to-JD gap analysis seeds the questions so practice matches the role, not a generic template.",
         ],
       },
       {
         heading: "PM decisions I'm proud of",
         body: [
-          "Rubric-first, not LLM-first. The scoring module ingests the actual official rubric as context and has the model produce a score with citations from the transcript. This is the difference between \"fuzzy encouragement\" and \"actionable feedback\" — and it's what lets us charge.",
+          "Rubric-first, not LLM-first. The scoring module ingests the actual official rubric as context and has the model produce a score with citations from the transcript. This is the difference between \"fuzzy encouragement\" and \"actionable feedback\", and it's what lets us charge.",
           "GPT-4o over Claude for evaluation. I chose GPT-4o specifically because structured-output reliability and instruction-following under rubric constraints tested better on our golden set. Claude 3.5/4 wins on open-ended writing; GPT-4o wins on \"follow this 40-row rubric without drifting.\"",
-          "ElevenLabs over OpenAI realtime. Voice is the product. ElevenLabs' emotional range on Indonesian + English code-switching beats alternatives for the local market — and code-switching is the default in real LPDP interviews.",
+          "ElevenLabs over OpenAI realtime. Voice is the product. ElevenLabs' emotional range on Indonesian + English code-switching beats alternatives for the local market, and code-switching is the default in real LPDP interviews.",
           "Pricing in IDR with granularity. Rp 10K single session is lower than a coffee. Rp 28K pack nudges toward commitment. Rp 150K monthly locks in power users. The ladder is designed for the psychology of exam-prep spend, not SaaS.",
         ],
       },
@@ -187,7 +187,7 @@ const caseStudies: Record<string, CaseStudy> = {
     interviewPrep: [
       {
         q: "How do you know the scoring is actually accurate?",
-        a: "Three signals: (1) rubric citations — the model must quote a transcript span for each score, so a human grader can audit in seconds; (2) a 50-session golden set I've hand-graded and calibrate against on every prompt or model change; (3) qualitative feedback from candidates who went on to pass the real interview.",
+        a: "Three signals: (1) rubric citations, the model must quote a transcript span for each score, so a human grader can audit in seconds; (2) a 50-session golden set I've hand-graded and calibrate against on every prompt or model change; (3) qualitative feedback from candidates who went on to pass the real interview.",
       },
       {
         q: "Why GPT-4o for evaluation and ElevenLabs for voice? Why not a single vendor?",
@@ -195,7 +195,67 @@ const caseStudies: Record<string, CaseStudy> = {
       },
       {
         q: "What stops a student from screenshotting feedback and sharing it?",
-        a: "Nothing — and that's fine. The defensibility is rubric coverage and voice realism; the content per-session is tailored enough that a screenshot doesn't replace the practice loop. Worrying about piracy at this stage is premature; worrying about sharing that drives WOM is correct.",
+        a: "Nothing, and that's fine. The defensibility is rubric coverage and voice realism; the content per-session is tailored enough that a screenshot doesn't replace the practice loop. Worrying about piracy at this stage is premature; worrying about sharing that drives WOM is correct.",
+      },
+    ],
+  },
+  nectic: {
+    title: "nectic",
+    tagline:
+      "Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams. No filters, no drama.",
+    archetype: "AI for emerging-market GTM",
+    status: "Landing live, early-stage",
+    liveUrl: "https://nectic.xyz",
+    role: "Solo PM + builder, product, positioning, GTM",
+    stack: [
+      "WhatsApp Business API (conversation ingestion)",
+      "LLM summarization (topic + theme extraction)",
+      "Weekly digest delivery (email / Slack)",
+      "Next.js + Vercel (landing)",
+    ],
+    sections: [
+      {
+        heading: "The problem",
+        body: "In Southeast Asia, sales happens on WhatsApp. Not Salesforce, not HubSpot. The transcript of what customers are actually objecting to, asking for, and calling broken sits in thousands of private chat threads across the sales team. PM teams at SE Asia companies fly blind because the qualitative signal is trapped in a channel they do not own or read. Regular CRM tooling does not solve this because it assumes the sales conversation is already structured.",
+      },
+      {
+        heading: "What it does",
+        body: [
+          "Connects to a company's WhatsApp Business account and ingests sales conversations (with consent) into a processing pipeline.",
+          "LLM summarization extracts recurring themes: feature requests, objections, competitor mentions, pricing friction, onboarding confusion.",
+          "Delivers a weekly product intelligence digest to the PM team by email or Slack. Structured, not a raw dump: top themes, direct customer quotes, week-over-week deltas.",
+        ],
+      },
+      {
+        heading: "PM decisions I'm proud of",
+        body: [
+          "Starting from the user channel, not the PM channel. Most analytics tools assume the data lives somewhere structured. Nectic starts from where the conversation actually happens (WhatsApp) and backs into the structure. That framing is the whole product.",
+          "Positioning on weekly digest, not real-time dashboard. PMs do not need another live feed. They need a signal they read once a week that changes how they prioritize. The cadence is the product.",
+          "No filters, no drama. Explicit tagline choice. Competing tools summarize conversations into CRM-friendly prose. The signal gets sanitized out. Nectic keeps the raw customer voice in the digest, with citations.",
+          "Vertical on SE Asia first. A WhatsApp-first product does not make sense in most Western markets where sales uses email or Salesforce. Picking SE Asia as the wedge is a market-fit bet, not a generic expansion plan.",
+        ],
+      },
+      {
+        heading: "Tradeoffs I'd revisit",
+        body: [
+          "WhatsApp Business API has real limits on scraping at the scale required for enterprise. Getting consent and the right API tier is a GTM problem as much as a technical one.",
+          "LLM summarization quality is heavily prompt-dependent. The real product work is not the model choice; it is the rubric for what counts as a theme worth surfacing. That rubric does not exist yet in a calibrated form.",
+          "Current state is landing plus positioning. The live product needs a first pilot customer to stress-test the ingestion and digest quality at actual volume. That is the immediate next step.",
+        ],
+      },
+    ],
+    interviewPrep: [
+      {
+        q: "Why WhatsApp specifically, not Slack or email?",
+        a: "In SE Asia, WhatsApp is where sales actually happens between reps and enterprise buyers, including mid-market and SMB. Slack is internal; email is formal and underused for real conversation. The data gravity is on WhatsApp and nobody is mining it for product signal.",
+      },
+      {
+        q: "How do you avoid the summarizer hallucinating themes that are not there?",
+        a: "Two levers. First, the digest requires direct customer quote citations for every theme surfaced. If the model cannot cite a real conversation span, the theme is dropped. Second, a weekly sanity-check against a sampled set of conversations to ensure themes are actually frequent and not just prompt artifacts.",
+      },
+      {
+        q: "What is the defensibility when OpenAI or Anthropic could ship this as a plugin?",
+        a: "The defensibility is not the model, it is the rubric plus the vertical focus plus the customer access. Horizontal AI companies will not build the SE Asia WhatsApp workflow specifically, and the rubric for what constitutes PM-actionable signal is a product problem, not an LLM problem. Defensibility comes from the quality of the weekly digest staying surgically useful over months, which is a craft problem.",
       },
     ],
   },
@@ -209,7 +269,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   const cs = caseStudies[params.slug]
   if (!cs) return {}
   return {
-    title: `${cs.title} — Case study · Muhammad Ega`,
+    title: `${cs.title}, Case study · Muhammad Ega`,
     description: cs.tagline,
   }
 }
@@ -291,7 +351,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             Interview questions I can answer about this
           </h2>
           <p className="text-sm text-muted-foreground mb-6">
-            The questions AI PM interviewers actually ask — written out so you can see how I think,
+            The questions AI PM interviewers actually ask, written out so you can see how I think,
             not just what I shipped.
           </p>
           <div className="space-y-6">

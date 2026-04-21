@@ -5,7 +5,7 @@ simatupang.ega@gmail.com  ·  +44 7957 732 982  ·  muhammadegaa.vercel.app  · 
 
 ## Summary
 
-Product manager with five years building AI products inside non-AI companies. At Mekari I shipped an AI compliance automation track that cut enterprise onboarding from 45 days to 14, with 78% adoption of the new developer integration suite and double the contract value processed. At IBM I led a four-person team running early conversational AI during COVID, including an exposure-tracing chatbot used by 2,000+ employees. I am currently at Jaguar Land Rover in a product-owning engineering role, while shipping three independent AI products in parallel: codehere (AI coding-agent audit layer on npm), ravenote (Chrome extension with paying Stripe subscribers), and beeready (voice AI interview coach for Indonesian scholarship candidates, live with tiered IDR pricing). MSc Human-Computer Interaction, University of Birmingham (Distinction).
+Product manager with five years building AI products inside non-AI companies. At Mekari I shipped an AI compliance automation track that cut enterprise onboarding from 45 days to 14, with 78% adoption of the new developer integration suite and double the contract value processed. At IBM I led a four-person team running early conversational AI during COVID, including an exposure-tracing chatbot used by 2,000+ employees. I am currently at Jaguar Land Rover in a product-owning engineering role, while shipping four independent AI products in parallel: codehere (AI coding-agent audit layer on npm), ravenote (Chrome extension with paying Stripe subscribers), beeready (voice AI interview coach for Indonesian scholarship candidates, live with tiered IDR pricing), and nectic (WhatsApp sales conversation intelligence for SE Asia PM teams). MSc Human-Computer Interaction, University of Birmingham (Distinction).
 
 ## Shipped AI Products
 
@@ -26,6 +26,12 @@ Voice AI interview coach for Indonesian scholarship (LPDP, Chevening) and civil-
 * Live with three pricing tiers: Rp 10K single session, Rp 28K three-session pack, Rp 150K monthly. Tiers are shaped for exam-prep spend psychology rather than SaaS convention.
 * GPT-4o drives evaluation, ElevenLabs drives voice, with four distinct evaluator personas across interview phases. GPT-4o was chosen specifically because rubric-constrained instruction-following tested better than Claude on the calibration set.
 * Scoring engine produces evidence-cited feedback across Communication, Problem-solving, and Leadership, with transcript spans backing every score so a human grader can audit in seconds.
+
+### nectic  ·  [nectic.xyz](https://nectic.xyz)
+Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams in Southeast Asia.
+* Addresses a regional-specific gap: sales in SE Asia happens on WhatsApp, not CRM. PM teams have no qualitative signal from the conversation channel their customers actually use.
+* LLM summarization extracts recurring themes (feature requests, objections, competitor mentions, pricing friction) into a structured weekly digest with direct customer quote citations.
+* Landing live, positioning validated. Early-stage with private-beta pilot work in progress.
 
 ## Employment
 

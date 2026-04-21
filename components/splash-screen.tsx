@@ -45,7 +45,7 @@ export function SplashScreen() {
     setVisible(true)
   }, [])
 
-  // Reduced motion — skip straight to done.
+  // Reduced motion, skip straight to done.
   useEffect(() => {
     if (!visible || !reducedMotion) return
     setPhase("done")
@@ -108,7 +108,7 @@ export function SplashScreen() {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-muted-foreground"
             >
-              Authenticating
+              it&apos;s ega
             </motion.p>
 
             <PasscodeDisplay filled={filled} total={PASSCODE.length} value={PASSCODE} />

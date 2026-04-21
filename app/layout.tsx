@@ -22,7 +22,7 @@ const merriweather = Merriweather({
 })
 
 export const metadata = {
-  title: "Muhammad Ega — AI Product Manager",
+  title: "Muhammad Ega · AI Product Manager",
   description:
     "AI Product Manager shipping live AI products across dev tools, consumer SaaS, and vertical voice AI. Previously Senior PM at Mekari, PM at Shopee, Software Specialist at IBM.",
   keywords:
@@ -32,8 +32,8 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://muhammadegaa.vercel.app",
-    siteName: "Muhammad Ega — AI PM Portfolio",
-    title: "Muhammad Ega — AI Product Manager",
+    siteName: "Muhammad Ega · AI PM Portfolio",
+    title: "Muhammad Ega · AI Product Manager",
     description:
       "AI PM who ships. Live products across AI dev tools (codehere), consumer AI (ravenote), and vertical voice AI (beeready).",
     images: [
@@ -41,13 +41,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Ega — AI Product Manager",
+        alt: "Muhammad Ega · AI Product Manager",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ega — AI Product Manager",
+    title: "Muhammad Ega · AI Product Manager",
     description:
       "AI PM who ships. Live products: codehere, ravenote, beeready.",
   },

@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Github, Linkedin, Mail } from "lucide-react"
 
 export const metadata = {
-  title: "About — Muhammad Ega",
+  title: "About · Muhammad Ega",
   description:
     "Product manager in Manchester. MSc Human-Computer Interaction, University of Birmingham (Distinction). Interested in AI product work that ships.",
 }
@@ -32,30 +32,30 @@ const skills = [
 const education = [
   {
     school: "University of Birmingham",
-    program: "MSc Human-Computer Interaction — Distinction",
-    period: "Sep 2022 — Sep 2023",
+    program: "MSc Human-Computer Interaction, Distinction",
+    period: "Sep 2022 to Sep 2023",
     location: "Birmingham, UK",
   },
   {
     school: "Padjadjaran University",
     program: "BSc Electrical Engineering (3.42 / 4.00)",
-    period: "Aug 2015 — Feb 2019",
+    period: "Aug 2015 to Feb 2019",
     location: "Bandung, Indonesia",
   },
 ]
 
 const honors = [
   {
-    title: "2nd Place — Grab Hackathon",
+    title: "2nd Place at Grab Hackathon",
     org: "HackerEarth",
     summary:
       "AI-driven solution for large-scale mobility optimization using predictive modeling and real-time operational data.",
   },
   {
-    title: "Top 10 — CultivHacktion",
+    title: "Top 10 at CultivHacktion",
     org: "World Bank × TaniHub",
     summary:
-      "Patani — a machine learning recommendation system that analyses soil conditions and recommends crop strategies for unused agricultural land.",
+      "Patani, a machine learning recommendation system that analyses soil conditions and recommends crop strategies for unused agricultural land.",
   },
 ]
 
@@ -82,7 +82,7 @@ export default function AboutPage() {
           <p>
             My path has run through AI automation (IBM, 2020), marketplace growth (Shopee, 2022),
             API-first enterprise SaaS (Mekari, 2023–2024), and now automotive platform work. In
-            parallel, I've been shipping small AI products end-to-end —{" "}
+            parallel, I've been shipping small AI products end-to-end:{" "}
             <Link href="/work/codehere" className="underline underline-offset-4 font-medium">
               codehere
             </Link>
@@ -90,11 +90,15 @@ export default function AboutPage() {
             <Link href="/work/ravenote" className="underline underline-offset-4 font-medium">
               ravenote
             </Link>
-            , and{" "}
+            ,{" "}
             <Link href="/work/beeready" className="underline underline-offset-4 font-medium">
               beeready
-            </Link>{" "}
-            — to stay close to the actual tradeoffs that matter in LLM products: evals, cost, latency,
+            </Link>
+            , and{" "}
+            <Link href="/work/nectic" className="underline underline-offset-4 font-medium">
+              nectic
+            </Link>
+            {" "}to stay close to the actual tradeoffs that matter in LLM products: evals, cost, latency,
             and where to route which model.
           </p>
           <p>

@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { ArrowUpRight, Mail } from "lucide-react"
 
+import { TextScramble } from "@/components/ui/text-scramble"
+
 type Product = {
   slug: string
   name: string
@@ -40,15 +42,25 @@ const products: Product[] = [
     archetype: "Vertical voice AI",
     stack: ["GPT-4o", "ElevenLabs", "Realtime voice", "Rubric-based evals"],
     signal:
-      "Live product · 3-tier pricing (Rp 10K–150K) · 4 evaluator personas · instant scoring across Communication / Problem-solving / Leadership dimensions",
+      "Live product · 3-tier pricing (Rp 10K to 150K) · 4 evaluator personas · instant scoring across Communication / Problem-solving / Leadership dimensions",
+  },
+  {
+    slug: "nectic",
+    name: "nectic",
+    tagline: "Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams.",
+    url: "https://nectic.xyz",
+    archetype: "AI for emerging-market GTM",
+    stack: ["WhatsApp Business API", "LLM summarization", "Weekly digest delivery"],
+    signal:
+      "Addresses a SE-Asia-specific gap: sales runs on WhatsApp, PM teams fly blind. Landing live, early-stage.",
   },
 ]
 
 const corporate = [
-  { role: "Product Engineer", company: "Jaguar Land Rover", period: "2024 — Present", location: "Manchester" },
-  { role: "Senior Product Manager", company: "Mekari", period: "2023 — 2024", location: "Jakarta" },
+  { role: "Product Engineer", company: "Jaguar Land Rover", period: "2024 to Present", location: "Manchester" },
+  { role: "Senior Product Manager", company: "Mekari", period: "2023 to 2024", location: "Jakarta" },
   { role: "Product Manager", company: "Shopee", period: "2022", location: "Jakarta" },
-  { role: "Software Specialist", company: "IBM", period: "2020 — 2022", location: "Jakarta" },
+  { role: "Software Specialist", company: "IBM", period: "2020 to 2022", location: "Jakarta" },
 ]
 
 export default function Home() {
@@ -61,9 +73,9 @@ export default function Home() {
             Muhammad Ega · Product Manager · AI
           </p>
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            I ship AI products end-to-end —
+            I ship AI products end-to-end.
             <br className="hidden sm:block" />
-            from PRD to production to pricing.
+            From PRD to production to pricing.
           </h1>
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-8 leading-relaxed">
             5+ years in product. Currently at Jaguar Land Rover. Previously Senior PM at Mekari (launched
@@ -71,12 +83,12 @@ export default function Home() {
             PM at Shopee (2.8M+ sellers), and Software Specialist at IBM (led 4-person AI automation
             team). MSc Human-Computer Interaction, University of Birmingham (Distinction).
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
             <Link
               href="/work"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
+              className="group inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
             >
-              See the work
+              <TextScramble text="SEE THE WORK" className="text-sm" />
               <ArrowUpRight className="ml-1.5 h-4 w-4" />
             </Link>
             <a
@@ -96,11 +108,10 @@ export default function Home() {
           <div className="mb-10">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-2">Shipped AI products</h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Three live products across three AI product archetypes. Early-stage — building in public,
-              validating PMF.
+              Four live products across four AI product archetypes. Early-stage, building in public and validating PMF.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             {products.map((p) => (
               <div
                 key={p.slug}
