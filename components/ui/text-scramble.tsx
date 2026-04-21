@@ -11,7 +11,6 @@ interface TextScrambleProps {
 
 export function TextScramble({ text, className = "" }: TextScrambleProps) {
   const [displayText, setDisplayText] = useState(text)
-  const [isHovering, setIsHovering] = useState(false)
   const [isScrambling, setIsScrambling] = useState(false)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const frameRef = useRef(0)
@@ -48,15 +47,6 @@ export function TextScramble({ text, className = "" }: TextScrambleProps) {
     }, 30)
   }, [text])
 
-  const handleMouseEnter = () => {
-    setIsHovering(true)
-    scramble()
-  }
-
-  const handleMouseLeave = () => {
-    setIsHovering(false)
-  }
-
   useEffect(() => {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
@@ -65,35 +55,22 @@ export function TextScramble({ text, className = "" }: TextScrambleProps) {
 
   return (
     <span
-      className={`group relative inline-flex flex-col cursor-pointer select-none ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className={`inline-flex select-none font-mono tracking-widest uppercase ${className}`}
+      onMouseEnter={scramble}
     >
-      <span className="relative font-mono tracking-widest uppercase">
-        {displayText.split("").map((char, i) => (
-          <span
-            key={i}
-            className={`inline-block transition-all duration-150 ${
-              isScrambling && char !== text[i] ? "text-primary scale-110" : "text-foreground"
-            }`}
-            style={{
-              transitionDelay: `${i * 10}ms`,
-            }}
-          >
-            {char}
-          </span>
-        ))}
-      </span>
-
-      {/* Animated underline */}
-      <span className="relative h-px w-full mt-1 overflow-hidden">
+      {displayText.split("").map((char, i) => (
         <span
-          className={`absolute inset-0 bg-foreground transition-transform duration-500 ease-out origin-left ${
-            isHovering ? "scale-x-100" : "scale-x-0"
+          key={i}
+          className={`inline-block transition-transform duration-150 ${
+            isScrambling && char !== text[i] ? "scale-110" : ""
           }`}
-        />
-        <span className="absolute inset-0 bg-border" />
-      </span>
+          style={{
+            transitionDelay: `${i * 10}ms`,
+          }}
+        >
+          {char === " " ? " " : char}
+        </span>
+      ))}
     </span>
   )
 }

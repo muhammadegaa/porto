@@ -69,31 +69,32 @@ export default function Home() {
       {/* Hero */}
       <section className="border-b bg-background">
         <div className="container mx-auto px-4 py-16 sm:py-24 max-w-5xl">
-          <p className="text-sm font-medium text-muted-foreground mb-4 tracking-wide uppercase">
-            Muhammad Ega · Product Manager · AI
+          <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-6 tracking-[0.2em] uppercase">
+            Muhammad Ega  ·  AI Product Manager
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            I ship AI products end-to-end.
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
+            In AI, evals and cost
             <br className="hidden sm:block" />
-            From PRD to production to pricing.
+            are the product.
+            <br className="hidden sm:block" />
+            <span className="text-muted-foreground">Not the model.</span>
           </h1>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-            5+ years in product. Currently at Jaguar Land Rover. Previously Senior PM at Mekari (launched
-            AI compliance automation that cut enterprise onboarding from 45 to 14 days, 78% adoption),
-            PM at Shopee (2.8M+ sellers), and Software Specialist at IBM (led 4-person AI automation
-            team). MSc Human-Computer Interaction, University of Birmingham (Distinction).
+          <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mb-10 leading-relaxed">
+            Four AI products live right now: codehere, ravenote, beeready, nectic.
+            Before that, Senior PM at Mekari, shipping AI compliance to 600+ enterprise customers.
+            Now at Jaguar Land Rover on purpose, closing the systems-engineering gap most AI PMs have.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
             <Link
               href="/work"
-              className="group inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
             >
               <TextScramble text="SEE THE WORK" className="text-sm" />
-              <ArrowUpRight className="ml-1.5 h-4 w-4" />
+              <ArrowUpRight className="ml-2 h-4 w-4" />
             </Link>
             <a
               href="mailto:simatupang.ega@gmail.com?subject=AI%20PM%20role"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-foreground/20 font-medium hover:bg-muted transition"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-foreground/20 font-medium hover:bg-muted transition"
             >
               <Mail className="mr-2 h-4 w-4" />
               simatupang.ega@gmail.com
