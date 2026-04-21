@@ -86,10 +86,11 @@ const corporate: Role[] = [
     location: "Manchester, UK",
     period: "Sep 2024 to Present",
     summary:
-      "Designing and shipping internal automation for connected-vehicle services, authoring technical user stories, and collaborating with engineering on platform reliability.",
+      "Product-owning engineering role on connected-vehicle services at JLR's Manchester hub. Took the role on purpose to close the systems gap most AI PMs carry.",
     wins: [
-      "Cut SMS verification configuration time by 80% via internal automation tooling",
-      "Operational throughput up 15%; activation funnel conversion up 22% across 15+ user stories",
+      "Internal tooling moved SMS verification configuration from a manual workflow to under 60 seconds. Operational throughput up 15%.",
+      "Authored 15+ technical user stories and acceptance criteria. Activation funnel conversion up 22% over the tracked quarter.",
+      "Wrote customer-benefit cases and engineering trade-offs that fed prioritization reviews with the connected-services team.",
     ],
   },
   {
@@ -98,11 +99,13 @@ const corporate: Role[] = [
     location: "Jakarta",
     period: "Sep 2023 to Aug 2024",
     summary:
-      "Owned the API-first product roadmap for 600+ enterprise customers at Indonesia's leading B2B SaaS. Led AI-driven compliance automation and developer integration launches.",
+      "Owned the API-first roadmap for Mekari Sign across 600+ enterprise customers at Indonesia's largest B2B SaaS.",
     wins: [
-      "Enterprise onboarding cut from 45 → 14 days via AI-driven compliance automation (eKYC, certificate issuance, batch signing)",
-      "78% adoption of developer integration suite (eSignature, AutoSign, Document Status); doubled contract value processed",
-      "Translated regulatory constraints into prioritized requirements; facilitated weekly alignment across engineering, legal, and sales",
+      "Shipped the AI compliance track (eKYC, certificate issuance, batch signing). Median enterprise activation moved from 45 days to 14.",
+      "Shipped the developer integration suite (eSignature, AutoSign, Document Status event streams). 78% adoption across enterprise customers. Contract value processed doubled over the year.",
+      "Ran weekly regulatory triage with the eng lead on Sign and legal counsel. Every ask came out with a yes-or-no and a scoped PRD inside seven days, no under-review limbo.",
+      "Extended the public API with modular hooks so partner integrations stopped requiring bespoke engineering per deal.",
+      "The call I'd own: shipped eKYC against the older certificate spec rather than wait on the regulator's v2. Migration later was cheaper than missing the quarter.",
     ],
   },
   {
@@ -111,11 +114,12 @@ const corporate: Role[] = [
     location: "Jakarta",
     period: "Feb 2022 to Jul 2022",
     summary:
-      "Led seller onboarding and growth programs across Southeast Asia's largest e-commerce platform.",
+      "Seller onboarding and growth programs across SEA's largest marketplace. Left to pursue MSc at University of Birmingham.",
     wins: [
-      "Growth program adopted by 2.8M+ sellers; monthly signups up 20%",
-      "Operationalized churn prediction with data science: 18% churn reduction, retained ~$1.2M GMV",
-      "50+ seller interviews drove support-ticket reduction of 32% and CSAT improvement from 3.2 → 4.0",
+      "Seller onboarding programs adopted by 2.8M+ sellers. Monthly signups up 20%.",
+      "Worked with the data science team to operationalize churn prediction. Churn down 18%. Roughly $1.2M GMV retained.",
+      "User research with 50+ high-value sellers in the top GMV quartile. Support tickets down 32%. CSAT from 3.2 to 4.0.",
+      "Cohort-segmented the onboarding funnel to target the biggest drop-off step. It turned out to be a documentation-upload flow that legal had over-specified.",
     ],
   },
   {
@@ -124,11 +128,12 @@ const corporate: Role[] = [
     location: "Jakarta",
     period: "May 2020 to Jan 2022",
     summary:
-      "Led 4-person engineering team delivering AI and RPA automation for enterprise clients; shipped early conversational AI during COVID.",
+      "Led a 4-person team delivering AI and automation for enterprise clients. 10,000+ monthly transactions worth $2.5M processed.",
     wins: [
-      "Processed 10,000+ monthly transactions worth $2.5M with 15% throughput gain",
-      "AI-powered COVID exposure-tracing chatbot: 5,000+ daily conversations across 2,000+ employees",
-      "8 production RPA systems, 99.2% uptime, <0.5% error rate, automating 120+ workflows",
+      "Designed and deployed an AI-powered COVID exposure-tracing chatbot. 5,000+ daily conversations across 2,000+ employees at an enterprise client during lockdown.",
+      "Built and deployed 8 production RPA systems. 99.2% uptime. Under 0.5% error rate. 120+ workflows automated across finance and operations.",
+      "Built the monitoring and alerting integration that cut mean incident-response time in half on the production estate.",
+      "Standardized team coding and review practices. New-engineer onboarding roughly halved.",
     ],
   },
 ]

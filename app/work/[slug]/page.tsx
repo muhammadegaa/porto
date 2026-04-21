@@ -15,6 +15,7 @@ type CaseStudy = {
   liveUrl: string
   role: string
   stack: string[]
+  theCall: string
   sections: Section[]
   interviewPrep?: { q: string; a: string }[]
 }
@@ -36,6 +37,8 @@ const caseStudies: Record<string, CaseStudy> = {
       "Vercel (landing)",
       "npm distribution",
     ],
+    theCall:
+      "CLI over IDE extension. Owning the audit layer beats competing on raw coding quality, and a CLI is what an enterprise security review can read in one pass. IDE extension stays on the roadmap once the governance primitive is stable.",
     sections: [
       {
         heading: "The bet",
@@ -95,6 +98,8 @@ const caseStudies: Record<string, CaseStudy> = {
       "Vercel Functions (backend proxy)",
       "Edge Config (cost tracking)",
     ],
+    theCall:
+      "Free tier is bring-your-own-OpenRouter-key. It caps viral growth because users need to set up an account elsewhere, but it keeps COGS inside margin from day one. Before external funding that is the correct tradeoff. I would make the same call again.",
     sections: [
       {
         heading: "The problem",
@@ -154,6 +159,8 @@ const caseStudies: Record<string, CaseStudy> = {
       "Rubric-based scoring engine",
       "Stripe / local payment rails",
     ],
+    theCall:
+      "GPT-4o over Claude for evaluation. Claude 3.5/4 wins on open-ended writing; GPT-4o wins on following a 40-row rubric without drifting, which is the thing the product sells. The rubric is the product, not the prose.",
     sections: [
       {
         heading: "The problem",
@@ -213,6 +220,8 @@ const caseStudies: Record<string, CaseStudy> = {
       "Weekly digest delivery (email / Slack)",
       "Next.js + Vercel (landing)",
     ],
+    theCall:
+      "Weekly digest, not a real-time dashboard. PMs do not need another live feed. A once-a-week signal that actually changes prioritization beats a dashboard that gets ignored after week two. The cadence is the product.",
     sections: [
       {
         heading: "The problem",
@@ -325,6 +334,17 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               {s}
             </span>
           ))}
+        </div>
+      </section>
+
+      <section className="mb-12">
+        <div className="rounded-lg border-l-4 border-foreground bg-muted/40 px-5 py-5 sm:px-6 sm:py-6">
+          <p className="text-[11px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground mb-2">
+            The call I&apos;d own
+          </p>
+          <p className="text-base sm:text-lg leading-relaxed text-foreground">
+            {cs.theCall}
+          </p>
         </div>
       </section>
 
