@@ -10,6 +10,7 @@ type Section = {
 type CaseStudy = {
   title: string
   tagline: string
+  tldr: string
   archetype: string
   status: string
   liveUrl: string
@@ -29,6 +30,7 @@ const caseStudies: Record<string, CaseStudy> = {
     status: "v0.3 alpha · shipped to npm · landing live",
     liveUrl: "https://codehere.uk",
     role: "Solo PM + builder, product strategy, PRD, go-to-market",
+    tldr: "An audit-layer CLI that runs 60+ vulnerability pattern checks on any AI-authored diff before execution. Chose CLI over IDE extension to own the governance primitive, not compete on raw coding quality. Published v0.3 to npm.",
     stack: [
       "Node/TS CLI",
       "OpenRouter multi-provider (Claude, OpenAI, Cohere, Ollama)",
@@ -90,6 +92,7 @@ const caseStudies: Record<string, CaseStudy> = {
     status: "v1.0 live on Chrome Web Store · Stripe Pro tier active",
     liveUrl: "https://ravenote.xyz",
     role: "Solo PM + builder, product, pricing, backend, GTM",
+    tldr: "Chrome extension that turns Udemy and YouTube lectures into AI study notes and quizzes. Free tier is bring-your-own-OpenRouter-key; Pro tier proxies through a backend that reconciles generation cost against Stripe revenue. Live on the Chrome Web Store with paying users.",
     stack: [
       "Chrome extension (MV3)",
       "OpenRouter multi-model routing",
@@ -152,6 +155,7 @@ const caseStudies: Record<string, CaseStudy> = {
     status: "Live · IDR pricing tiers active · early traction",
     liveUrl: "https://beeready.dev",
     role: "Solo PM + builder, product, evals design, pricing",
+    tldr: "Voice AI interview coach scoring candidates against official LPDP, IELTS, and TOEFL rubrics. Chose GPT-4o over Claude because following a 40-row rubric without drifting is the product, not open-ended writing. Live with three IDR pricing tiers.",
     stack: [
       "GPT-4o (evaluation + coaching)",
       "ElevenLabs (realtime voice)",
@@ -214,6 +218,7 @@ const caseStudies: Record<string, CaseStudy> = {
     status: "Landing live, early-stage",
     liveUrl: "https://nectic.xyz",
     role: "Solo PM + builder, product, positioning, GTM",
+    tldr: "LLM summarization of WhatsApp sales conversations into a weekly product intelligence digest for SE Asia PM teams. Weekly cadence chosen over real-time dashboard because PMs do not need another live feed. Landing live, private-beta pilot work in progress.",
     stack: [
       "WhatsApp Business API (conversation ingestion)",
       "LLM summarization (topic + theme extraction)",
@@ -309,6 +314,12 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6">
           {cs.tagline}
         </p>
+        <p className="text-sm sm:text-base leading-relaxed text-foreground bg-muted/40 border-l-2 border-foreground pl-4 py-3 mb-6">
+          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground block mb-1">
+            In one sentence
+          </span>
+          {cs.tldr}
+        </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
           <a
             href={cs.liveUrl}
@@ -365,7 +376,36 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </section>
       ))}
 
-      <footer className="mt-16 pt-8 border-t flex items-center justify-between text-sm">
+      <section className="mt-16 pt-10 border-t">
+        <div className="rounded-lg bg-muted/30 border p-6 sm:p-8">
+          <h2 className="font-serif text-xl sm:text-2xl font-bold mb-3">
+            Want to talk about {cs.title}?
+          </h2>
+          <p className="text-base text-foreground/80 leading-relaxed mb-5">
+            Currently taking conversations about AI PM and founding PM roles in the UK, Singapore,
+            and Indonesia. Remote also works. Fastest reply is email.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href={`mailto:simatupang.ega@gmail.com?subject=About%20${encodeURIComponent(cs.title)}`}
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
+            >
+              simatupang.ega@gmail.com
+            </a>
+            <a
+              href="https://linkedin.com/in/mesimatupang"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-foreground/20 font-medium hover:bg-muted transition"
+            >
+              LinkedIn
+              <ArrowUpRight className="ml-2 h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="mt-10 pt-6 flex items-center justify-between text-sm">
         <Link
           href="/work"
           className="inline-flex items-center text-muted-foreground hover:text-foreground"
@@ -373,12 +413,6 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           <ChevronLeft className="h-4 w-4 mr-1" />
           All work
         </Link>
-        <a
-          href="mailto:simatupang.ega@gmail.com?subject=About%20your%20portfolio"
-          className="font-medium underline underline-offset-4"
-        >
-          Talk to me about this →
-        </a>
       </footer>
     </article>
   )

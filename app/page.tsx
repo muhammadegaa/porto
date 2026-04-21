@@ -106,7 +106,7 @@ export default function Home() {
           <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mb-10 leading-relaxed">
             Four AI products live right now: codehere, ravenote, beeready, nectic.
             Before that, Senior PM at Mekari, shipping AI compliance to 600+ enterprise customers.
-            Now at Jaguar Land Rover on purpose, closing the systems-engineering gap most AI PMs have.
+            Now at Jaguar Land Rover, closing the systems-engineering gap between PM and shipped AI.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
             <Link
@@ -208,6 +208,39 @@ export default function Home() {
             <Link href="/work" className="underline underline-offset-4 font-medium">
               Full case studies →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact panel */}
+      <section className="border-t bg-muted/30">
+        <div className="container mx-auto px-4 py-12 sm:py-16 max-w-5xl">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="max-w-2xl">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-3">Let&apos;s talk.</h2>
+              <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
+                Currently taking conversations about AI PM and founding PM roles in the UK,
+                Singapore, and Indonesia. Remote also works. Fastest reply is email.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 items-start">
+              <a
+                href="mailto:simatupang.ega@gmail.com?subject=AI%20PM%20role"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-foreground text-background font-medium hover:opacity-90 transition"
+              >
+                <Mail className="mr-2 h-4 w-4" />
+                simatupang.ega@gmail.com
+              </a>
+              <a
+                href="https://linkedin.com/in/mesimatupang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-foreground/20 font-medium hover:bg-muted transition"
+              >
+                LinkedIn
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
