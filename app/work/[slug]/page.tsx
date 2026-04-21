@@ -365,26 +365,6 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
         </section>
       ))}
 
-      {cs.interviewPrep && cs.interviewPrep.length > 0 && (
-        <section className="mt-14 pt-10 border-t">
-          <h2 className="font-serif text-xl sm:text-2xl font-bold mb-2">
-            Interview questions I can answer about this
-          </h2>
-          <p className="text-sm text-muted-foreground mb-6">
-            The questions AI PM interviewers actually ask, written out so you can see how I think,
-            not just what I shipped.
-          </p>
-          <div className="space-y-6">
-            {cs.interviewPrep.map((qa, i) => (
-              <div key={i} className="rounded-lg border bg-muted/30 p-5">
-                <p className="font-medium mb-2 text-foreground">Q. {qa.q}</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">{qa.a}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       <footer className="mt-16 pt-8 border-t flex items-center justify-between text-sm">
         <Link
           href="/work"

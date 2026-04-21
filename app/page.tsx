@@ -57,10 +57,34 @@ const products: Product[] = [
 ]
 
 const corporate = [
-  { role: "Product Engineer", company: "Jaguar Land Rover", period: "2024 to Present", location: "Manchester" },
-  { role: "Senior Product Manager", company: "Mekari", period: "2023 to 2024", location: "Jakarta" },
-  { role: "Product Manager", company: "Shopee", period: "2022", location: "Jakarta" },
-  { role: "Software Specialist", company: "IBM", period: "2020 to 2022", location: "Jakarta" },
+  {
+    role: "Product Engineer",
+    company: "Jaguar Land Rover",
+    period: "2024 to Present",
+    location: "Manchester",
+    signal: "PM-track engineering on connected-vehicle services. Systems depth on purpose.",
+  },
+  {
+    role: "Senior Product Manager",
+    company: "Mekari",
+    period: "2023 to 2024",
+    location: "Jakarta",
+    signal: "AI compliance automation for 600+ enterprise customers. Onboarding 45 days to 14. 78% adoption of the developer integration suite.",
+  },
+  {
+    role: "Product Manager",
+    company: "Shopee",
+    period: "2022",
+    location: "Jakarta",
+    signal: "Seller onboarding adopted by 2.8M+ sellers. Churn down 18%. CSAT 3.2 to 4.0.",
+  },
+  {
+    role: "Software Specialist",
+    company: "IBM",
+    period: "2020 to 2022",
+    location: "Jakarta",
+    signal: "Led a 4-person AI team. COVID exposure-tracing chatbot, 5,000+ daily conversations, 2,000+ employees.",
+  },
 ]
 
 export default function Home() {
@@ -168,12 +192,15 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {corporate.map((c) => (
-              <div key={c.company} className="rounded-lg border bg-background p-4 sm:p-5">
-                <div className="text-xs text-muted-foreground mb-1">{c.period}</div>
-                <div className="font-medium">{c.role}</div>
-                <div className="text-sm text-muted-foreground">
+              <div key={c.company} className="rounded-lg border bg-background p-5">
+                <div className="flex items-baseline justify-between mb-1">
+                  <div className="font-medium">{c.role}</div>
+                  <div className="text-xs text-muted-foreground">{c.period}</div>
+                </div>
+                <div className="text-sm text-muted-foreground mb-3">
                   {c.company} · {c.location}
                 </div>
+                <p className="text-sm text-foreground/80 leading-relaxed">{c.signal}</p>
               </div>
             ))}
           </div>
