@@ -104,11 +104,11 @@ export function SplashScreen() {
           <div className="relative flex flex-col items-center gap-10 px-6">
             <motion.p
               initial={{ opacity: 0, y: 6 }}
-              animate={{ opacity: 0.7, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-muted-foreground"
+              animate={{ opacity: 0.8, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="font-serif text-base sm:text-lg tracking-tight text-foreground/80"
             >
-              it&apos;s ega
+              Muhammad Ega
             </motion.p>
 
             <PasscodeDisplay filled={filled} total={PASSCODE.length} value={PASSCODE} />
