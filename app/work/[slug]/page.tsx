@@ -208,6 +208,23 @@ const caseStudies: Record<string, CaseStudy> = {
         q: "What stops a student from screenshotting feedback and sharing it?",
         a: "Nothing, and that's fine. The defensibility is rubric coverage and voice realism; the content per-session is tailored enough that a screenshot doesn't replace the practice loop. Worrying about piracy at this stage is premature; worrying about sharing that drives WOM is correct.",
       },
+      // OGP-specific interview prep
+      {
+        q: "Tell me about a time you took on an ambitious project with high ambiguity and limited resources.",
+        a: "Building beeready solo was exactly that — an ambitious public-good project in a highly ambiguous space. I had no prior experience with voice AI or rubric-based scoring, but I recognized that Indonesian scholarship and civil-service candidates needed accessible, affordable practice that matched real evaluator rubrics. I shipped the first version in 6 weeks by focusing on the core value: rubric-first scoring. The ambiguity came from not knowing if candidates would trust AI to evaluate their high-stakes interviews, but I validated the concept by sharing early versions with LPDP applicants who gave immediate feedback. This maps directly to OGP's value of operating in ambiguous spaces with a bias for action.",
+      },
+      {
+        q: "How do you measure impact when it's not about market share or revenue?",
+        a: "For beeready, impact is measured by the number of candidates who pass their real interviews, the time saved compared to expensive human tutors, and the accessibility of the product. I track qualitative feedback from users who share that beeready helped them pass LPDP or CPNS interviews, and I calculate cost avoidance by comparing beeready's pricing to traditional tutoring services. This is exactly OGP's definition of impact: citizen experience, man-hours saved, and cost avoidance — not market share.",
+      },
+      {
+        q: "Why do you want to work in the Singapore public sector?",
+        a: "I built beeready because I believe in public-good product work — creating tools that level the playing field for underprivileged candidates. OGP's mission to use product thinking to improve citizen lives resonates deeply with me. Singapore's approach to government digital services is world-class, and I want to contribute my experience building scalable, impactful AI products to OGP's Open Data team. The opportunity to work on projects that directly benefit millions of Singaporeans, using the same product principles I applied to beeready, is what drives me.",
+      },
+      {
+        q: "Describe a time you had to take end-to-end responsibility for a product, from idea to launch.",
+        a: "With beeready, I owned every aspect: product strategy, user research, technical implementation, pricing, and go-to-market. I started by identifying the problem through conversations with LPDP candidates, then designed the rubric-based scoring system, built the voice AI integration, set up IDR pricing tiers, and launched the product. I even handled customer support initially to understand user pain points directly. This aligns with OGP's VC operating model where product officers own decisions and take full responsibility for outcomes.",
+      },
     ],
   },
   nectic: {
