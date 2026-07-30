@@ -4,10 +4,12 @@ import { Github, Linkedin, Mail } from "lucide-react"
 export const metadata = {
   title: "About · Muhammad Ega",
   description:
-    "Product manager in Manchester. MSc Human-Computer Interaction, University of Birmingham (Distinction). Interested in AI product work that ships.",
+    "Senior product manager in Manchester. MSc Human-Computer Interaction, University of Birmingham (Distinction). Interested in AI product work that ships.",
 }
 
 const skills = [
+  "Agentic AI in production",
+  "Generative AI",
   "LLM applications",
   "Evals & rubric-based scoring",
   "Model routing & fallback",
@@ -76,8 +78,8 @@ export default function AboutPage() {
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-6">About</h1>
         <div className="space-y-4 text-base sm:text-lg leading-relaxed text-foreground/90">
           <p>
-            Hi, I'm Ega. I'm a product manager based in Manchester, building AI products in public
-            and working at Jaguar Land Rover on connected-vehicle services.
+            Hi, I'm Ega. I'm a senior product manager based in Manchester, building AI products in
+            public and working at Jaguar Land Rover on connected-vehicle services.
           </p>
           <p>
             My path has run through AI automation (IBM, 2020), marketplace growth (Shopee, 2022),

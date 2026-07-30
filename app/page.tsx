@@ -62,7 +62,7 @@ const corporate = [
     company: "Jaguar Land Rover",
     period: "2024 to Present",
     location: "Manchester",
-    signal: "PM-track engineering on connected-vehicle services. Systems depth on purpose.",
+    signal: "PM-track engineering on connected-vehicle services. Led the enterprise adoption case for agentic AI coding platforms across a 1,000+ engineer organisation.",
   },
   {
     role: "Senior Product Manager",
@@ -94,7 +94,7 @@ export default function Home() {
       <section className="border-b bg-background">
         <div className="container mx-auto px-4 py-16 sm:py-24 max-w-5xl">
           <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-6 tracking-[0.2em] uppercase">
-            Muhammad Ega  ·  AI Product Manager
+            Muhammad Ega  ·  Senior AI Product Manager
           </p>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
             In AI, evals and cost
@@ -219,8 +219,8 @@ export default function Home() {
             <div className="max-w-2xl">
               <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-3">Let&apos;s talk.</h2>
               <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-                Currently taking conversations about AI PM and founding PM roles in the UK,
-                Singapore, and Indonesia. Remote also works. Fastest reply is email.
+                Currently taking conversations about senior AI PM and founding PM roles in the UK,
+                EU, the Gulf, and Southeast Asia. Remote also works. Fastest reply is email.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 items-start">
