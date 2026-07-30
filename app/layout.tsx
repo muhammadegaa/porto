@@ -22,20 +22,20 @@ const merriweather = Merriweather({
 })
 
 export const metadata = {
-  title: "Muhammad Ega · AI Product Manager",
+  title: "Muhammad Ega · Senior AI Product Manager",
   description:
-    "AI Product Manager shipping live AI products across dev tools, consumer SaaS, and vertical voice AI. Previously Senior PM at Mekari, PM at Shopee, Software Specialist at IBM.",
+    "Senior AI Product Manager shipping AI products across dev tools, consumer SaaS, and vertical voice AI. Previously Senior PM at Mekari, PM at Shopee, Software Specialist at IBM.",
   keywords:
-    "AI Product Manager, LLM products, AI PM, evals, RAG, voice AI, product strategy, Muhammad Ega",
-  metadataBase: new URL("https://muhammadegaa.vercel.app"),
+    "Senior AI Product Manager, agentic AI, generative AI, LLM products, AI PM, evals, RAG, voice AI, product strategy, Muhammad Ega",
+  metadataBase: new URL("https://itsega.xyz"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://muhammadegaa.vercel.app",
+    url: "https://itsega.xyz",
     siteName: "Muhammad Ega · AI PM Portfolio",
-    title: "Muhammad Ega · AI Product Manager",
+    title: "Muhammad Ega · Senior AI Product Manager",
     description:
-      "AI PM who ships. Live products across AI dev tools (codehere), consumer AI (ravenote), and vertical voice AI (beeready).",
+      "AI PM who ships. Products across AI dev tools (codehere), consumer AI (ravenote), and vertical voice AI (beeready).",
     images: [
       {
         url: "/og-image.jpg",
@@ -47,9 +47,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ega · AI Product Manager",
+    title: "Muhammad Ega · Senior AI Product Manager",
     description:
-      "AI PM who ships. Live products: codehere, ravenote, beeready.",
+      "AI PM who ships. Products: codehere, ravenote, beeready.",
   },
   icons: {
     icon: [

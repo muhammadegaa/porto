@@ -18,7 +18,6 @@ type CaseStudy = {
   stack: string[]
   theCall: string
   sections: Section[]
-  interviewPrep?: { q: string; a: string }[]
 }
 
 const caseStudies: Record<string, CaseStudy> = {
@@ -27,10 +26,10 @@ const caseStudies: Record<string, CaseStudy> = {
     tagline:
       "An enterprise-safe AI coding agent. Every AI-generated write is audited against 60+ vulnerability patterns before execution.",
     archetype: "AI dev tools · safety",
-    status: "v0.3 alpha · shipped to npm · landing live",
+    status: "v0.8.0 on npm · landing live",
     liveUrl: "https://codehere.uk",
     role: "Solo PM + builder, product strategy, PRD, go-to-market",
-    tldr: "An audit-layer CLI that runs 60+ vulnerability pattern checks on any AI-authored diff before execution. Chose CLI over IDE extension to own the governance primitive, not compete on raw coding quality. Published v0.3 to npm.",
+    tldr: "An audit-layer CLI that runs 60+ vulnerability pattern checks on any AI-authored diff before execution. Chose CLI over IDE extension to own the governance primitive, not compete on raw coding quality. On npm, now at v0.8.0.",
     stack: [
       "Node/TS CLI",
       "OpenRouter multi-provider (Claude, OpenAI, Cohere, Ollama)",
@@ -71,16 +70,6 @@ const caseStudies: Record<string, CaseStudy> = {
           "Pattern-based scanning has a false-positive ceiling. Next iteration uses an LLM-judge over flagged diffs, but that re-introduces a dependency I initially wanted to avoid.",
           "Multi-provider is a feature for early users and a tax on me. Each provider has different streaming, tool-calling, and error shapes. A thin adapter abstraction paid for itself by v0.3 but slowed v0.1.",
         ],
-      },
-    ],
-    interviewPrep: [
-      {
-        q: "Why a CLI instead of an IDE extension?",
-        a: "Distribution cost is lower (npm install), the audit layer is the same code regardless of surface, and enterprise security teams can audit a CLI in one pass. Extensions are on the roadmap once the governance primitive is stable.",
-      },
-      {
-        q: "How do you evaluate the audit layer?",
-        a: "Golden-set of 250+ adversarial diffs (intentionally-vulnerable code) graded against CVE categories; precision/recall tracked per release. False-positive rate is the headline metric because it's what kills developer trust.",
       },
     ],
   },
@@ -132,30 +121,16 @@ const caseStudies: Record<string, CaseStudy> = {
         ],
       },
     ],
-    interviewPrep: [
-      {
-        q: "How do you evaluate note quality without a ground-truth dataset?",
-        a: "Two loops: (1) a rubric-based LLM-judge with a fixed rubric (coverage, structure, no-hallucination) over a 30-lecture golden set; (2) qualitative, retention scores from the generated quizzes correlate with note coherence. Not perfect, but it catches regressions when I change prompts or models.",
-      },
-      {
-        q: "Why didn't you build a web app instead of a Chrome extension?",
-        a: "Distribution. Learners already live inside Udemy and YouTube. A web app means they paste a URL; an extension means I'm where they already are. Tradeoff: MV3 review cycles are slow and I can't trivially support Firefox/Edge yet.",
-      },
-      {
-        q: "How do you keep margin on Rp-level pricing if you're thinking about emerging markets next?",
-        a: "Route cheaper models for short-transcript lectures, cache common prompts via the Runtime Cache layer, and cap tokens aggressively (max 1600 out). The temperature-0.25 setting also keeps retries low.",
-      },
-    ],
   },
   beeready: {
     title: "beeready",
     tagline:
       "A voice-first AI interview coach for Indonesian scholarship (LPDP, Chevening) and civil-service (CPNS) candidates. GPT-4o + ElevenLabs, scoring against official rubrics.",
     archetype: "Vertical voice AI",
-    status: "Live · IDR pricing tiers active · early traction",
-    liveUrl: "https://beeready.dev",
+    status: "v1 shipped · IDR pricing tiers",
+    liveUrl: "",
     role: "Solo PM + builder, product, evals design, pricing",
-    tldr: "Voice AI interview coach scoring candidates against official LPDP, IELTS, and TOEFL rubrics. Chose GPT-4o over Claude because following a 40-row rubric without drifting is the product, not open-ended writing. Live with three IDR pricing tiers.",
+    tldr: "Voice AI interview coach scoring candidates against official LPDP, IELTS, and TOEFL rubrics. Chose GPT-4o over Claude because following a 40-row rubric without drifting is the product, not open-ended writing. Shipped with three IDR pricing tiers.",
     stack: [
       "GPT-4o (evaluation + coaching)",
       "ElevenLabs (realtime voice)",
@@ -193,37 +168,6 @@ const caseStudies: Record<string, CaseStudy> = {
           "Voice latency is the single biggest UX lever; turn-taking under 800ms is what makes it feel like a real interview. Getting there meant carefully sequencing TTS chunks and accepting slightly worse-quality prosody at the boundaries.",
           "Calibrating the rubric scoring against actual human graders is the next milestone. Right now I sanity-check against my own graded set; scaling this needs partnerships with LPDP-prep tutors.",
         ],
-      },
-    ],
-    interviewPrep: [
-      {
-        q: "How do you know the scoring is actually accurate?",
-        a: "Three signals: (1) rubric citations, the model must quote a transcript span for each score, so a human grader can audit in seconds; (2) a 50-session golden set I've hand-graded and calibrate against on every prompt or model change; (3) qualitative feedback from candidates who went on to pass the real interview.",
-      },
-      {
-        q: "Why GPT-4o for evaluation and ElevenLabs for voice? Why not a single vendor?",
-        a: "Best-of-breed. GPT-4o's structured output and instruction-following won on rubric compliance in the golden set. ElevenLabs' Indonesian voice quality is not close to anything else. Unified vendors optimize for integration simplicity; we optimized for outcome quality because the rubric is the product.",
-      },
-      {
-        q: "What stops a student from screenshotting feedback and sharing it?",
-        a: "Nothing, and that's fine. The defensibility is rubric coverage and voice realism; the content per-session is tailored enough that a screenshot doesn't replace the practice loop. Worrying about piracy at this stage is premature; worrying about sharing that drives WOM is correct.",
-      },
-      // OGP-specific interview prep
-      {
-        q: "Tell me about a time you took on an ambitious project with high ambiguity and limited resources.",
-        a: "Building beeready solo was exactly that — an ambitious public-good project in a highly ambiguous space. I had no prior experience with voice AI or rubric-based scoring, but I recognized that Indonesian scholarship and civil-service candidates needed accessible, affordable practice that matched real evaluator rubrics. I shipped the first version in 6 weeks by focusing on the core value: rubric-first scoring. The ambiguity came from not knowing if candidates would trust AI to evaluate their high-stakes interviews, but I validated the concept by sharing early versions with LPDP applicants who gave immediate feedback. This maps directly to OGP's value of operating in ambiguous spaces with a bias for action.",
-      },
-      {
-        q: "How do you measure impact when it's not about market share or revenue?",
-        a: "For beeready, impact is measured by the number of candidates who pass their real interviews, the time saved compared to expensive human tutors, and the accessibility of the product. I track qualitative feedback from users who share that beeready helped them pass LPDP or CPNS interviews, and I calculate cost avoidance by comparing beeready's pricing to traditional tutoring services. This is exactly OGP's definition of impact: citizen experience, man-hours saved, and cost avoidance — not market share.",
-      },
-      {
-        q: "Why do you want to work in the Singapore public sector?",
-        a: "I built beeready because I believe in public-good product work — creating tools that level the playing field for underprivileged candidates. OGP's mission to use product thinking to improve citizen lives resonates deeply with me. Singapore's approach to government digital services is world-class, and I want to contribute my experience building scalable, impactful AI products to OGP's Open Data team. The opportunity to work on projects that directly benefit millions of Singaporeans, using the same product principles I applied to beeready, is what drives me.",
-      },
-      {
-        q: "Describe a time you had to take end-to-end responsibility for a product, from idea to launch.",
-        a: "With beeready, I owned every aspect: product strategy, user research, technical implementation, pricing, and go-to-market. I started by identifying the problem through conversations with LPDP candidates, then designed the rubric-based scoring system, built the voice AI integration, set up IDR pricing tiers, and launched the product. I even handled customer support initially to understand user pain points directly. This aligns with OGP's VC operating model where product officers own decisions and take full responsibility for outcomes.",
       },
     ],
   },
@@ -275,20 +219,6 @@ const caseStudies: Record<string, CaseStudy> = {
         ],
       },
     ],
-    interviewPrep: [
-      {
-        q: "Why WhatsApp specifically, not Slack or email?",
-        a: "In SE Asia, WhatsApp is where sales actually happens between reps and enterprise buyers, including mid-market and SMB. Slack is internal; email is formal and underused for real conversation. The data gravity is on WhatsApp and nobody is mining it for product signal.",
-      },
-      {
-        q: "How do you avoid the summarizer hallucinating themes that are not there?",
-        a: "Two levers. First, the digest requires direct customer quote citations for every theme surfaced. If the model cannot cite a real conversation span, the theme is dropped. Second, a weekly sanity-check against a sampled set of conversations to ensure themes are actually frequent and not just prompt artifacts.",
-      },
-      {
-        q: "What is the defensibility when OpenAI or Anthropic could ship this as a plugin?",
-        a: "The defensibility is not the model, it is the rubric plus the vertical focus plus the customer access. Horizontal AI companies will not build the SE Asia WhatsApp workflow specifically, and the rubric for what constitutes PM-actionable signal is a product problem, not an LLM problem. Defensibility comes from the quality of the weekly digest staying surgically useful over months, which is a craft problem.",
-      },
-    ],
   },
 }
 
@@ -338,15 +268,17 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
           {cs.tldr}
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
-          <a
-            href={cs.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-medium hover:underline"
-          >
-            {cs.liveUrl.replace(/^https?:\/\//, "")}
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
+          {cs.liveUrl && (
+            <a
+              href={cs.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 font-medium hover:underline"
+            >
+              {cs.liveUrl.replace(/^https?:\/\//, "")}
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          )}
           <span className="text-muted-foreground">{cs.role}</span>
         </div>
       </header>
@@ -399,8 +331,8 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
             Want to talk about {cs.title}?
           </h2>
           <p className="text-base text-foreground/80 leading-relaxed mb-5">
-            Currently taking conversations about AI PM and founding PM roles in the UK, Singapore,
-            and Indonesia. Remote also works. Fastest reply is email.
+            Currently taking conversations about senior AI PM and founding PM roles in the UK,
+            EU, the Gulf, and Southeast Asia. Remote also works. Fastest reply is email.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a

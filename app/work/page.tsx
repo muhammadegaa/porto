@@ -27,7 +27,7 @@ const aiCaseStudies: CaseStudy[] = [
       "91-page PRD + 20-scenario competitive analysis (World A–D futures model)",
       "Pre-execution security gate: 60+ vulnerability patterns audited before every AI write",
       "Multi-provider LLM orchestration via OpenRouter (Claude, OpenAI, Cohere, local Ollama)",
-      "Shipped v0.3 CLI to npm; 20+ test suites covering security, context-depth, and git workflows",
+      "On npm at v0.8.0; 20+ test suites covering security, context-depth, and git workflows",
     ],
   },
   {
@@ -48,12 +48,12 @@ const aiCaseStudies: CaseStudy[] = [
     name: "beeready",
     subtitle: "AI voice interview coach scoring candidates against official LPDP / IELTS / TOEFL rubrics.",
     archetype: "Vertical voice AI",
-    liveUrl: "https://beeready.dev",
+    liveUrl: "",
     highlights: [
       "GPT-4o + ElevenLabs real-time voice, 4 evaluator personas across interview phases",
       "Rubric-based evals: scoring against LPDP band descriptors, IELTS / TOEFL criteria",
       "Sub-60-second scoring across Communication, Problem-solving, Leadership dimensions",
-      "3-tier IDR pricing (Rp 10K single / Rp 28K pack / Rp 150K monthly) live",
+      "3-tier IDR pricing (Rp 10K single / Rp 28K pack / Rp 150K monthly)",
     ],
   },
   {
@@ -112,7 +112,7 @@ const corporate: Role[] = [
     role: "Product Manager",
     company: "Shopee",
     location: "Jakarta",
-    period: "Feb 2022 to Jul 2022",
+    period: "Feb 2022 to Sep 2022",
     summary:
       "Seller onboarding and growth programs across SEA's largest marketplace. Left to pursue MSc at University of Birmingham.",
     wins: [
@@ -170,15 +170,17 @@ export default function WorkPage() {
                     {cs.archetype}
                   </span>
                 </div>
-                <a
-                  href={cs.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
-                >
-                  {cs.liveUrl.replace(/^https?:\/\//, "")}
-                  <ArrowUpRight className="h-3.5 w-3.5" />
-                </a>
+                {cs.liveUrl && (
+                  <a
+                    href={cs.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
+                  >
+                    {cs.liveUrl.replace(/^https?:\/\//, "")}
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </a>
+                )}
               </div>
               <p className="text-sm sm:text-base mb-4 leading-relaxed">{cs.subtitle}</p>
               <ul className="space-y-1.5 mb-4">

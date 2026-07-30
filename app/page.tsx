@@ -9,6 +9,7 @@ type Product = {
   tagline: string
   url: string
   archetype: string
+  status: string
   stack: string[]
   signal: string
 }
@@ -20,9 +21,10 @@ const products: Product[] = [
     tagline: "Enterprise-safe AI coding agent with a pre-execution audit layer.",
     url: "https://codehere.uk",
     archetype: "AI dev tools / safety",
+    status: "Live · npm v0.8.0",
     stack: ["Claude", "OpenAI", "Local SQLite RAG", "Multi-provider routing"],
     signal:
-      "91-page PRD · 20-scenario competitive analysis · shipped v0.3 CLI to npm · 60+ pattern security scan before every AI write",
+      "91-page PRD · 20-scenario competitive analysis · on npm at v0.8.0 · 60+ pattern security scan before every AI write",
   },
   {
     slug: "ravenote",
@@ -30,6 +32,7 @@ const products: Product[] = [
     tagline: "Chrome extension that turns Udemy & YouTube lectures into AI study notes and quizzes.",
     url: "https://ravenote.xyz",
     archetype: "Consumer AI / monetization",
+    status: "Live · Chrome Web Store v1.0",
     stack: ["Chrome MV3", "OpenRouter", "Stripe", "Firebase Auth", "Vercel Functions"],
     signal:
       "Live on Chrome Web Store v1.0 · Stripe-backed Pro tier · OpenRouter fallback routing across 4 providers · usage-based cost reconciliation",
@@ -38,11 +41,12 @@ const products: Product[] = [
     slug: "beeready",
     name: "beeready",
     tagline: "AI voice interview coach scoring candidates against official LPDP / IELTS / TOEFL rubrics.",
-    url: "https://beeready.dev",
+    url: "",
     archetype: "Vertical voice AI",
+    status: "v1 shipped",
     stack: ["GPT-4o", "ElevenLabs", "Realtime voice", "Rubric-based evals"],
     signal:
-      "Live product · 3-tier pricing (Rp 10K to 150K) · 4 evaluator personas · instant scoring across Communication / Problem-solving / Leadership dimensions",
+      "3-tier pricing (Rp 10K to 150K) · 4 evaluator personas · instant scoring across Communication / Problem-solving / Leadership dimensions",
   },
   {
     slug: "nectic",
@@ -50,6 +54,7 @@ const products: Product[] = [
     tagline: "Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams.",
     url: "https://nectic.xyz",
     archetype: "AI for emerging-market GTM",
+    status: "Landing live · private beta",
     stack: ["WhatsApp Business API", "LLM summarization", "Weekly digest delivery"],
     signal:
       "Addresses a SE-Asia-specific gap: sales runs on WhatsApp, PM teams fly blind. Landing live, early-stage.",
@@ -104,7 +109,7 @@ export default function Home() {
             <span className="text-muted-foreground">Not the model.</span>
           </h1>
           <p className="text-base sm:text-lg text-foreground/80 max-w-2xl mb-10 leading-relaxed">
-            Four AI products live right now: codehere, ravenote, beeready, nectic.
+            Four shipped AI products: codehere, ravenote, beeready, nectic.
             Before that, Senior PM at Mekari, shipping AI compliance to 600+ enterprise customers.
             Now at Jaguar Land Rover, closing the systems-engineering gap between PM and shipped AI.
           </p>
@@ -133,7 +138,7 @@ export default function Home() {
           <div className="mb-10">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-2">Shipped AI products</h2>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Four live products across four AI product archetypes. Early-stage, building in public and validating PMF.
+              Four shipped products across four AI product archetypes. Early-stage, building in public and validating PMF.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
@@ -146,6 +151,11 @@ export default function Home() {
                   <h3 className="font-serif text-xl font-bold">{p.name}</h3>
                   <span className="text-xs text-muted-foreground uppercase tracking-wide">
                     {p.archetype}
+                  </span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-[11px] px-2 py-0.5 rounded-full border text-muted-foreground">
+                    {p.status}
                   </span>
                 </div>
                 <p className="text-sm sm:text-base mb-4 leading-relaxed">{p.tagline}</p>
@@ -167,15 +177,17 @@ export default function Home() {
                   >
                     Case study →
                   </Link>
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
-                  >
-                    live site
-                    <ArrowUpRight className="h-3.5 w-3.5" />
-                  </a>
+                  {p.url && (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
+                    >
+                      live site
+                      <ArrowUpRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
