@@ -145,8 +145,8 @@ export default function WorkPage() {
       <header className="mb-10 sm:mb-14">
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Work</h1>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          Two tracks. On the left, AI products I'm shipping independently right now. On the right,
-          six years of corporate product outcomes across fintech, marketplaces, and enterprise SaaS.
+          Two tracks: AI products I'm shipping independently right now, and six years of corporate
+          product outcomes across enterprise SaaS, marketplaces, automotive, and enterprise IT.
         </p>
       </header>
 
