@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowUpRight, Mail } from "lucide-react"
 
 import { TextScramble } from "@/components/ui/text-scramble"
+import { ProductCard } from "@/components/ui/product-card"
 
 type Product = {
   slug: string
@@ -142,11 +143,8 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
-            {products.map((p) => (
-              <div
-                key={p.slug}
-                className="flex flex-col rounded-lg border bg-background p-5 sm:p-6 hover:border-foreground/40 transition"
-              >
+            {products.map((p, i) => (
+              <ProductCard key={p.slug} index={i}>
                 <div className="flex items-baseline justify-between mb-2">
                   <h3 className="font-serif text-xl font-bold">{p.name}</h3>
                   <span className="text-xs text-muted-foreground uppercase tracking-wide">
@@ -154,7 +152,13 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-[11px] px-2 py-0.5 rounded-full border text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5 text-[11px] px-2 py-0.5 rounded-full border text-muted-foreground">
+                    {/live/i.test(p.status) && (
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+                        <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                      </span>
+                    )}
                     {p.status}
                   </span>
                 </div>
@@ -175,7 +179,8 @@ export default function Home() {
                     href={`/work/${p.slug}`}
                     className="font-medium hover:underline"
                   >
-                    Case study →
+                    Case study{" "}
+                    <span className="inline-block transition-transform group-hover:translate-x-0.5">→</span>
                   </Link>
                   {p.url && (
                     <a
@@ -185,11 +190,11 @@ export default function Home() {
                       className="text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
                     >
                       live site
-                      <ArrowUpRight className="h-3.5 w-3.5" />
+                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </a>
                   )}
                 </div>
-              </div>
+              </ProductCard>
             ))}
           </div>
         </div>

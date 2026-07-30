@@ -48,7 +48,7 @@ const education = [
 
 const honors = [
   {
-    title: "2nd Prize · Grab Hack for Good 2022 (USD 3,000)",
+    title: "2nd Prize · Grab Hack for Good 2022",
     org: "Grab × HackerEarth · Team Round Tofu · Grab Traditional Market",
     summary:
       "Predictive modeling and real-time operational data applied to bringing Indonesia's traditional markets onto Grab.",
