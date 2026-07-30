@@ -81,7 +81,7 @@ const caseStudies: Record<string, CaseStudy> = {
     status: "v1.0 live on Chrome Web Store · Stripe Pro tier active",
     liveUrl: "https://ravenote.xyz",
     role: "Solo PM + builder, product, pricing, backend, GTM",
-    tldr: "Chrome extension that turns Udemy and YouTube lectures into AI study notes and quizzes. Free tier is bring-your-own-OpenRouter-key; Pro tier proxies through a backend that reconciles generation cost against Stripe revenue. Live on the Chrome Web Store with paying users.",
+    tldr: "Chrome extension that turns Udemy and YouTube lectures into AI study notes and quizzes. Free tier is bring-your-own-OpenRouter-key; Pro tier proxies through a backend that reconciles generation cost against Stripe revenue. Live on the Chrome Web Store with a paid tier.",
     stack: [
       "Chrome extension (MV3)",
       "OpenRouter multi-model routing",
@@ -127,7 +127,7 @@ const caseStudies: Record<string, CaseStudy> = {
     tagline:
       "A voice-first AI interview coach for Indonesian scholarship (LPDP, Chevening) and civil-service (CPNS) candidates. GPT-4o + ElevenLabs, scoring against official rubrics.",
     archetype: "Vertical voice AI",
-    status: "v1 shipped · IDR pricing tiers",
+    status: "v1 shipped · sunset after validation",
     liveUrl: "",
     role: "Solo PM + builder, product, evals design, pricing",
     tldr: "Voice AI interview coach scoring candidates against official LPDP, IELTS, and TOEFL rubrics. Chose GPT-4o over Claude because following a 40-row rubric without drifting is the product, not open-ended writing. Shipped with three IDR pricing tiers.",

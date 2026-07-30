@@ -43,7 +43,7 @@ const products: Product[] = [
     tagline: "AI voice interview coach scoring candidates against official LPDP / IELTS / TOEFL rubrics.",
     url: "",
     archetype: "Vertical voice AI",
-    status: "v1 shipped",
+    status: "v1 shipped · sunset",
     stack: ["GPT-4o", "ElevenLabs", "Realtime voice", "Rubric-based evals"],
     signal:
       "3-tier pricing (Rp 10K to 150K) · 4 evaluator personas · instant scoring across Communication / Problem-solving / Leadership dimensions",
@@ -54,7 +54,7 @@ const products: Product[] = [
     tagline: "Reads WhatsApp sales conversations and delivers weekly product intelligence to PM teams.",
     url: "https://nectic.xyz",
     archetype: "AI for emerging-market GTM",
-    status: "Landing live · private beta",
+    status: "Landing live · relaunch in progress",
     stack: ["WhatsApp Business API", "LLM summarization", "Weekly digest delivery"],
     signal:
       "Addresses a SE-Asia-specific gap: sales runs on WhatsApp, PM teams fly blind. Landing live, early-stage.",

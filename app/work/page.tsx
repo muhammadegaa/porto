@@ -37,7 +37,7 @@ const aiCaseStudies: CaseStudy[] = [
     archetype: "Consumer AI / monetization",
     liveUrl: "https://ravenote.xyz",
     highlights: [
-      "Live on Chrome Web Store v1.0 with Stripe-backed Pro subscriptions",
+      "Live on Chrome Web Store v1.0 with a Stripe-backed Pro tier",
       "OpenRouter fallback routing across 4 providers (Sonnet 4.6 default, Gemini / Qwen / OpenAI backup)",
       "Usage-based cost reconciliation: webhook ties OpenRouter generation costs to Stripe charges",
       "Free tier bring-your-own-key, Pro tier proxy. Clean separation of cost economics",
