@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 export const metadata = {
   title: "Work · Muhammad Ega",
   description:
-    "AI PM case studies (codehere, ravenote, beeready) and five years of corporate product management across Mekari, Shopee, IBM, and Jaguar Land Rover.",
+    "AI PM case studies (codehere, ravenote, beeready) and six years of product and engineering across Mekari, Shopee, IBM, and Jaguar Land Rover.",
 }
 
 type CaseStudy = {
@@ -88,6 +88,7 @@ const corporate: Role[] = [
     summary:
       "Product-owning engineering role on connected-vehicle services at JLR's Manchester hub. Took the role on purpose to close the systems gap most AI PMs carry.",
     wins: [
+      "Led the enterprise adoption case for agentic AI coding platforms across a 1,000+ engineer organisation: set the evaluation criteria, ran hands-on assessments with engineering teams, delivered the adoption-readiness recommendation to connected-services leadership.",
       "Internal tooling moved SMS verification configuration from a manual workflow to under 60 seconds. Operational throughput up 15%.",
       "Authored 15+ technical user stories and acceptance criteria. Activation funnel conversion up 22% over the tracked quarter.",
       "Wrote customer-benefit cases and engineering trade-offs that fed prioritization reviews with the connected-services team.",
@@ -103,7 +104,7 @@ const corporate: Role[] = [
     wins: [
       "Shipped the AI compliance track (eKYC, certificate issuance, batch signing). Median enterprise activation moved from 45 days to 14.",
       "Shipped the developer integration suite (eSignature, AutoSign, Document Status event streams). 78% adoption across enterprise customers. Contract value processed doubled over the year.",
-      "Ran weekly regulatory triage with the eng lead on Sign and legal counsel. Every ask came out with a yes-or-no and a scoped PRD inside seven days, no under-review limbo.",
+      "Ran weekly regulatory triage with the eng lead on Sign and legal counsel. Every ask came out with a yes-or-no and a scoped PRD inside seven days, no under-review limbo. Zero rollback-level regressions across 12 months of API releases.",
       "Extended the public API with modular hooks so partner integrations stopped requiring bespoke engineering per deal.",
       "The call I'd own: shipped eKYC against the older certificate spec rather than wait on the regulator's v2. Migration later was cheaper than missing the quarter.",
     ],
@@ -145,7 +146,7 @@ export default function WorkPage() {
         <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Work</h1>
         <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
           Two tracks. On the left, AI products I'm shipping independently right now. On the right,
-          five years of corporate PM outcomes across fintech, marketplaces, and enterprise SaaS.
+          six years of corporate product outcomes across fintech, marketplaces, and enterprise SaaS.
         </p>
       </header>
 
@@ -207,7 +208,7 @@ export default function WorkPage() {
         <div className="flex items-baseline justify-between mb-6">
           <h2 className="font-serif text-xl sm:text-2xl font-bold">Corporate PM track record</h2>
           <span className="text-xs text-muted-foreground uppercase tracking-wide">
-            five years · four companies
+            six years · four companies
           </span>
         </div>
         <div className="space-y-4 sm:space-y-5">

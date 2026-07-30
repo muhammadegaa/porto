@@ -200,7 +200,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-14 sm:py-20 max-w-5xl">
           <h2 className="font-serif text-2xl sm:text-3xl font-bold mb-2">Corporate PM track record</h2>
           <p className="text-muted-foreground text-sm sm:text-base mb-8">
-            Business outcomes from five years in product across fintech, marketplaces, and enterprise SaaS.
+            Business outcomes from six years in product and engineering across fintech, marketplaces, and enterprise SaaS.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {corporate.map((c) => (
