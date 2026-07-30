@@ -48,16 +48,18 @@ const education = [
 
 const honors = [
   {
-    title: "2nd Place at Grab Hackathon",
-    org: "HackerEarth",
+    title: "2nd Prize · Grab Hack for Good 2022 (USD 3,000)",
+    org: "Grab × HackerEarth · Team Round Tofu · Grab Traditional Market",
     summary:
-      "AI-driven solution for large-scale mobility optimization using predictive modeling and real-time operational data.",
+      "Predictive modeling and real-time operational data applied to bringing Indonesia's traditional markets onto Grab.",
+    href: "https://grabhackforgood.hackerearth.com/community/challenges/hackathon/hackforgood-grab-hackathon-2022/",
   },
   {
     title: "Top 10 at CultivHacktion",
-    org: "World Bank × TaniHub",
+    org: "World Bank × TaniHub · Team Dosirak Tech",
     summary:
       "Patani, a machine learning recommendation system that analyses soil conditions and recommends crop strategies for unused agricultural land.",
+    href: "https://www.linkedin.com/posts/at-tanihub-group-we-believe-that-everyones-share-6861497969708015616-W9-M/",
   },
 ]
 
@@ -149,6 +151,16 @@ export default function AboutPage() {
               <p className="font-medium">{h.title}</p>
               <p className="text-sm text-muted-foreground mb-2">{h.org}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{h.summary}</p>
+              {h.href && (
+                <a
+                  href={h.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs underline underline-offset-4 text-muted-foreground hover:text-foreground inline-block mt-2"
+                >
+                  official results ↗
+                </a>
+              )}
             </div>
           ))}
         </div>
